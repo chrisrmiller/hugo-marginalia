@@ -2,8 +2,8 @@ baseurl: "/"
 locale: "en-us"
 defaultContentLanguage: "en"
 # defaultContentLanguage: "zh"
-title: "Hugo Prose"
-theme: "hugo-prose"
+title: "Marginalia"
+theme: "hugo-marginalia"
 ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 footnotereturnlinkcontents: "↩"
 
@@ -46,7 +46,7 @@ menu:
 params:
   homePosts: 6
   mainSections: ["post", "work"]
-  editLink: "https://github.com/yihui/hugo-prose/edit/master/exampleSite/content/"
+  # editLink: "https://github.com/chrisrmiller/hugo-marginalia/edit/main/exampleSite/content/"
   authorDelimiter: " / "
   stickyMenu: false
   description: >

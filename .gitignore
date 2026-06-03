@@ -1,7 +1,52 @@
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
-exampleSite/public
-exampleSite/index.Rmd
-.positai
+#### Hugo build artifacts #####
+public/
+resources/
+# The above two paths pertain to both / and elsewhere, e.g. exampleSite/
+/.hugo_build.lock
+hugo_stats.json
+/assets/jsconfig.json
+
+#### Hugo binaries ####
+hugo.exe
+hugo.darwin
+hugo.linux
+
+
+#### Node / generic build ####
+node_modules/
+build/
+
+
+#### Linux ####
+.directory
+
+#### macOS ####
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Icon?
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+#### macOS network shares (AFP) ####
+.AppleDB
+.AppleDesktop
+.apdisk
+Network Trash Folder
+Temporary Items
+
+#### Windows ####
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+
+#### Source ####
+# https://www.toptal.com/developers/gitignore/api/hugo

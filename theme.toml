@@ -1,12 +1,12 @@
-name = "Prose"
+name = "Marginalia"
 license = "MIT"
-licenselink = "https://github.com/yihui/hugo-prose/blob/master/LICENSE.md"
-description = "A minimalist Hugo theme inspired by the academic theme, distill.pub, and tufte.css."
-homepage = "https://prose.yihui.org"
-tags = ["minimal", "blog", "personal", "clean", "simple", "starter", "minimalist"]
-features = ["blog"]
-min_version = "0.55.0"
+licenselink = "https://github.com/chrisrmiller/hugo-marginalia/blob/main/LICENSE.md"
+description = "A Distill-inspired Hugo theme for technical blogs and journals. Margin notes, minimal JS."
+# TODO: homepage = ""
+tags = ["distill", "technical", "academic", "documentation", "margin-notes", "sidenotes", "minimal-js", "clean"]
+features = ["blog"] # TODO: "syntax-highlighting", "math", "dark-mode"
+min_version = "0.161.0" # TODO: test on "0.151.0" where transform.ToMath stabilized
 
 [author]
-  name = "Yihui Xie"
-  homepage = "https://yihui.org"
+  name = "Chris Miller"
+  # TODO: homepage = ""
