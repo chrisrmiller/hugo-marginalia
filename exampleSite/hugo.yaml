@@ -4,11 +4,9 @@ defaultContentLanguage: "en"
 # defaultContentLanguage: "zh"
 title: "Marginalia"
 theme: "hugo-marginalia"
-ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
-footnotereturnlinkcontents: "↩"
 
 pagination:
-  pagerSize: 2
+  pagerSize: 6
 
 permalinks:
   post: "/post/:year/:month/:day/:slug/"
@@ -16,9 +14,10 @@ permalinks:
 outputs:
   home: [html, rss, json]
 
-# some menu items were added via the `menu` option in YAML in posts
 menu:
   header:
+    - name: Demos
+      url: "demo/"
     - name: Search
       url: "#"
       identifier: menu-search
@@ -37,6 +36,7 @@ menu:
       weight: 3
       pre: "optional"
     - name: Suggest an edit
+      # automatically disabled unless params.editLink is set
       url: "#"
       weight: 4
       identifier: "menu-edit"
@@ -50,19 +50,18 @@ params:
   authorDelimiter: " / "
   stickyMenu: false
   description: >
-    A website built through Hugo and blogdown with the hugo-prose theme.
+    A Hugo theme for technical blogs and journals.
   footer: >
-    &copy; [Lucius Annaeus Seneca](https://en.wikipedia.org/wiki/Seneca_the_Younger)
-    4 BC -- AD 65
+    &copy; Your name here.
   license: >
     Text and figures are licensed under [Creative Commons Attribution CC BY
     4.0](https://creativecommons.org/licenses/by/4.0/). The source code is
     licensed under MIT. The full source is available at
-    https://github.com/yihui/hugo-prose.
+    https://github.com/chrisrmiller/hugo-marginalia.
 
 markup:
-  highlight:
-    codeFences: false
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    codeFences: false # TODO C10b: drop this (default true), and add noClasses:false, lineNos

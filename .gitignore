@@ -1,8 +1,8 @@
 #### Hugo build artifacts #####
 public/
 resources/
-# The above two paths pertain to both / and elsewhere, e.g. exampleSite/
-/.hugo_build.lock
+.hugo_build.lock
+# The above three paths pertain to both / and elsewhere, e.g. exampleSite/
 hugo_stats.json
 /assets/jsconfig.json
 
@@ -47,6 +47,8 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 
+#### Notes (internal)
+/notes
 
 #### Source ####
 # https://www.toptal.com/developers/gitignore/api/hugo

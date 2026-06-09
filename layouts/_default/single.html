@@ -36,8 +36,6 @@
   <span class="nav-prev">{{ with .NextInSection }}<a href="{{ .RelPermalink }}" title={{ i18n "previousPost" }}>{{ .Title }}</a> &rarr;{{ end }}</span>
 </nav>
 {{ end }}
-
-{{ partial "disqus.html" . }}
 </div>
 
 {{ $.Scratch.Set "has_appendix" true }}

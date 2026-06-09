@@ -155,7 +155,7 @@ params:
 
 ### Comments
 
-Disqus, Utterances
+None out of the box.
 
 ### Searching
 
