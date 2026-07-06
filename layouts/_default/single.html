@@ -5,14 +5,35 @@
 {{ if .Draft }}
 <div class="watermark">Draft</div>
 {{ end }}
-<div class="article-meta">
+
 <h1><span class="title">{{ .Title }}</span></h1>
-{{ with .Params.author }}
-<h3 class="author">
-{{ if reflect.IsSlice . }}{{ delimit . (default " / " $.Site.Params.authorDelimiter) }}{{ else }}{{ . }}{{ end }}
-</h3>
-{{ end }}
-{{ if .Params.date }}<h3 class="date">{{ .Date.Format "2006-01-02" }}</h3>{{ end }}
+
+<div class="article-meta">
+  {{ with .Params.author }}
+  <div class="meta-col">
+    {{ if and (reflect.IsSlice .) (gt (len .) 1) }}
+    <span class="meta-label">Authors:</span>
+    <span class="meta-value">{{ delimit . (default " / " $.Site.Params.authorDelimiter) }}</span>
+    {{ else }}
+    <span class="meta-label">Author:</span>
+    <span class="meta-value">{{ if reflect.IsSlice . }}{{ index . 0 }}{{ else }}{{ . }}{{ end }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ if .Params.date }}
+  <div class="meta-col">
+    <span class="meta-label">Published:</span>
+    <time class="dateline" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+  </div>
+  {{ end }}
+  {{ if .Lastmod.After .Date }}
+  <div class="meta-col">
+    <span class="meta-label">Revised:</span>
+    <time class="dateline" datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "2006-01-02" }}</time>
+  </div>
+  {{ end }}
+</div>
+
 <p class="terms">
   {{ range $i := (slice "categories" "tags") }}
   {{ with ($.Param $i) }}
@@ -20,7 +41,6 @@
   {{ end }}
   {{ end }}
 </p>
-</div>
 
 <div class="article">
 {{ .Content }}
