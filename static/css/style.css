@@ -19,10 +19,8 @@
   --leading:   1.5;
   --fs-base:   1.0rem;
 
-  /* layout widths (drive the grid in C5) */
-  --gutter-left:  7rem;     /* contents / margin labels */
-  --gutter-right: 14rem;    /* sidenotes / figure spill */
-  --space:        1.25rem;
+  /* layout widths */
+  --space:     1.25rem;  /* base spacing step, reserved for C6 (probably)*/
 }
 
 /* overall layout */
