@@ -15,7 +15,7 @@
   --draft:         #ffd4a3;             /* draft-stripe */
 
   /* type scale */
-  --measure:   42rem;       /* body text column width */
+  --measure:   50rem;       /* body text column = inherited 800px @16px root */
   --leading:   1.5;
   --fs-base:   1.0rem;
 
@@ -34,7 +34,7 @@ body {
   overflow-x: hidden;
 }
 main, .menu ul, .footer, .single section, .post-nav {
-  max-width: 800px;
+  max-width: var(--measure);   /* was: 800px */
   margin: 0 auto 0;
 }
 main {
