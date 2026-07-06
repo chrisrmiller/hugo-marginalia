@@ -16,8 +16,8 @@
 
   /* type scale */
   --measure:   42rem;       /* body text column width */
-  --leading:   1.65;
-  --fs-base:   1.0625rem;
+  --leading:   1.5;
+  --fs-base:   1.0rem;
 
   /* layout widths (drive the grid in C5) */
   --gutter-left:  7rem;     /* contents / margin labels */
@@ -29,7 +29,8 @@
 * { box-sizing: border-box; }
 body {
   margin: 0 auto 0;
-  line-height: 1.5;
+  font-size: var(--fs-base);
+  line-height: var(--leading);
   overflow-x: hidden;
 }
 main, .menu ul, .footer, .single section, .post-nav {
